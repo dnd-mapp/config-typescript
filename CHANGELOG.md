@@ -6,8 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-09-20
+
 ### Added
 
 - `base` config with strict, environment-independent compiler options, available as `@dnd-mapp/config-typescript/base`.
 
-
+[Unreleased]: https://github.com/dnd-mapp/config-typescript/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/dnd-mapp/config-typescript/releases/tag/v1.0.0
