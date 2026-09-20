@@ -4,6 +4,7 @@
   "description": "Shared, reusable TypeScript configs (tsconfig bases) for all D&D Mapp projects.",
   "version": "0.0.0",
   "license": "MIT",
+  "type": "module",
   "author": "D&D Mapp",
   "keywords": [
     "tsconfig",
@@ -25,12 +26,12 @@
     "./*.json": "./configs/*.json",
     "./package.json": "./package.json"
   },
-  "files": [
-    "configs",
-    "CHANGELOG.md"
-  ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "dist"
+  },
+  "scripts": {
+    "prepublishOnly": "node scripts/prepare-dist.js"
   },
   "engines": {
     "node": "^24.21.0"
@@ -48,6 +49,7 @@
     }
   },
   "devDependencies": {
+    "@types/node": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
