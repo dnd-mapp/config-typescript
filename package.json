@@ -31,7 +31,9 @@
     "directory": "dist"
   },
   "scripts": {
-    "prepublishOnly": "node scripts/prepare-dist.js"
+    "prepublishOnly": "node scripts/prepare-dist.js",
+    "format": "prettier -w .",
+    "format-check": "prettier -c ."
   },
   "engines": {
     "node": "^24.21.0"
@@ -49,7 +51,9 @@
     }
   },
   "devDependencies": {
+    "@dnd-mapp/config-prettier": "catalog:prettier",
     "@types/node": "catalog:",
+    "prettier": "catalog:prettier",
     "typescript": "catalog:"
   },
   "peerDependencies": {
