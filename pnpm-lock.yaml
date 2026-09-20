@@ -180,8 +180,8 @@ catalogs:
       version: 0.23.2
   prettier:
     '@dnd-mapp/config-prettier':
-      specifier: ~1.0.0
-      version: 1.0.0
+      specifier: ~1.1.0
+      version: 1.1.0
     prettier:
       specifier: ~3.9.7
       version: 3.9.7
@@ -198,7 +198,7 @@ importers:
         version: 1.0.0(markdownlint-cli2@0.23.2)
       '@dnd-mapp/config-prettier':
         specifier: catalog:prettier
-        version: 1.0.0(prettier@3.9.7)
+        version: 1.1.0(prettier-plugin-organize-imports@4.3.0)(prettier@3.9.7)(typescript@6.0.3)
       '@types/node':
         specifier: 'catalog:'
         version: 24.13.5
@@ -230,11 +230,18 @@ packages:
       markdownlint-cli2:
         optional: true
 
-  '@dnd-mapp/config-prettier@1.0.0':
-    resolution: {integrity: sha512-+s+ivqgBkRLr9y6akRzPYHZM7f9yIGz/Abbm2gCenzWT02j9b4c/nktkGSu/fZY+Zi8O4nbUnx03nA4/L01i8Q==}
+  '@dnd-mapp/config-prettier@1.1.0':
+    resolution: {integrity: sha512-GMXyieOniCLkf68vd8eKhEuXEB95MOGLVsCCHrw1MUkCcnCRn0Cx93fzRPTIFU42mwpABkbKDJraJYeAlhsChw==}
     engines: {node: ^24.21.0}
     peerDependencies:
       prettier: ^3
+      prettier-plugin-organize-imports: ^4
+      typescript: ^6
+    peerDependenciesMeta:
+      prettier-plugin-organize-imports:
+        optional: true
+      typescript:
+        optional: true
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -571,9 +578,12 @@ snapshots:
     optionalDependencies:
       markdownlint-cli2: 0.23.2
 
-  '@dnd-mapp/config-prettier@1.0.0(prettier@3.9.7)':
+  '@dnd-mapp/config-prettier@1.1.0(prettier-plugin-organize-imports@4.3.0)(prettier@3.9.7)(typescript@6.0.3)':
     dependencies:
       prettier: 3.9.7
+    optionalDependencies:
+      prettier-plugin-organize-imports: 4.3.0(prettier@3.9.7)(typescript@6.0.3)
+      typescript: 6.0.3
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
