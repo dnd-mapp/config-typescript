@@ -1,0 +1,29 @@
+name: Pull request
+
+on:
+    pull_request:
+
+jobs:
+    ci:
+        name: CI
+        runs-on: ubuntu-26.04
+        timeout-minutes: 5
+        permissions:
+            contents: read
+        concurrency:
+            group: ${{ github.workflow }}-${{ github.ref }}
+            cancel-in-progress: true
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+            - name: Set up Node.js and pnpm and install dependencies
+              uses: pnpm/setup@703c52620218391530e48b9e8870d5c0082e1b9b # v2.1.0
+              with:
+                  cache: true
+                  runtime: node
+                  require-lockfile: true
+
+            - name: Check formatting
+              shell: bash
+              run: pnpm run format-check
