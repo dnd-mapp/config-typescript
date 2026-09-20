@@ -14,6 +14,13 @@
             "script": "format-check",
             "problemMatcher": [],
             "detail": "prettier -c ."
+        },
+        {
+            "label": "lint-md",
+            "type": "npm",
+            "script": "lint-md",
+            "problemMatcher": [],
+            "detail": "markdownlint-cli2"
         }
     ]
 }

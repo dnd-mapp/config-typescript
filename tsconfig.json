@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "./configs/base.json",
+    "include": ["scripts"],
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "lib": ["ES2025"],
+        "module": "nodenext",
+        "noEmit": true,
+        "target": "es2024",
+        "types": ["node"]
+    }
+}
