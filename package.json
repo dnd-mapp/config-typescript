@@ -54,6 +54,7 @@
     "@dnd-mapp/config-prettier": "catalog:prettier",
     "@types/node": "catalog:",
     "prettier": "catalog:prettier",
+    "prettier-plugin-organize-imports": "catalog:prettier",
     "typescript": "catalog:"
   },
   "peerDependencies": {
