@@ -33,6 +33,7 @@
   "scripts": {
     "prepublishOnly": "node scripts/prepare-dist.js",
     "lint-md": "markdownlint-cli2",
+    "typecheck": "tsc --noEmit",
     "format": "prettier -w .",
     "format-check": "prettier -c ."
   },

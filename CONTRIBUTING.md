@@ -25,6 +25,18 @@ Dependency versions live in the `catalog` in `pnpm-workspace.yaml`, which uses `
 
 Newly published releases are held back for three days through `minimumReleaseAge`. You may need to wait before you can bump to a very recent version.
 
+## Checks
+
+CI runs these checks on every pull request. Run them locally before you push.
+
+| Script                  | Purpose                                              |
+|:------------------------|:-----------------------------------------------------|
+| `pnpm run format-check` | Checks formatting with Prettier                      |
+| `pnpm run typecheck`    | Type-checks the scripts and tooling files with `tsc` |
+| `pnpm run lint-md`      | Lints Markdown with markdownlint-cli2                |
+
+Run `pnpm run format` to fix formatting issues.
+
 ## Changing or adding a config
 
 Configs live in `configs/*.json`. The `exports` map in `package.json` exposes each file with and without the `.json` extension.
