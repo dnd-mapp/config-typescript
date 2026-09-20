@@ -1,5 +1,5 @@
 name: CI checks
-description: Installs dependencies and runs the formatting and Markdown checks. Requires the repository to be checked out.
+description: Installs dependencies and runs the formatting, type, and Markdown checks. Requires the repository to be checked out.
 
 runs:
     using: composite
@@ -18,3 +18,7 @@ runs:
         - name: Lint Markdown
           shell: bash
           run: pnpm run lint-md
+
+        - name: Type-check
+          shell: bash
+          run: pnpm run typecheck
