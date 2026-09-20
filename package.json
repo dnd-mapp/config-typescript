@@ -1,0 +1,56 @@
+{
+  "$schema": "https://www.schemastore.org/package.json",
+  "name": "@dnd-mapp/config-typescript",
+  "description": "Shared, reusable TypeScript configs (tsconfig bases) for all D&D Mapp projects.",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "D&D Mapp",
+  "keywords": [
+    "tsconfig",
+    "typescript",
+    "config",
+    "shareable-config",
+    "dnd-mapp"
+  ],
+  "homepage": "https://github.com/dnd-mapp/config-typescript#readme",
+  "bugs": {
+    "url": "https://github.com/dnd-mapp/config-typescript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnd-mapp/config-typescript.git"
+  },
+  "exports": {
+    "./*": "./configs/*.json",
+    "./*.json": "./configs/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "configs",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^24.21.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.21.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.4.2",
+      "onFail": "error"
+    }
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "typescript": "^6"
+  }
+}
