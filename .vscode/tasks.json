@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "format",
+            "type": "npm",
+            "script": "format",
+            "problemMatcher": [],
+            "detail": "prettier -w ."
+        },
+        {
+            "label": "format-check",
+            "type": "npm",
+            "script": "format-check",
+            "problemMatcher": [],
+            "detail": "prettier -c ."
+        }
+    ]
+}

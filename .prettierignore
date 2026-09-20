@@ -1,6 +1,14 @@
-.idea/*
-!.idea/runConfigurations/
-!.idea/prettier.xml
+*
+
+!*/
+
+!*.json
+!*.yaml
+!*.yml
+!*.[tj]s
+!*.[cm][tj]s
+
+.idea/
 
 .vscode/*
 !.vscode/extensions.json
@@ -8,5 +16,6 @@
 !.vscode/tasks.json
 
 node_modules/
+pnpm-lock.yaml
 
 dist/

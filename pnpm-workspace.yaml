@@ -23,3 +23,7 @@ savePrefix: "~"
 catalog:
   "@types/node": ~24.13.5
   typescript: ~6.0.3
+catalogs:
+  prettier:
+    "@dnd-mapp/config-prettier": ~1.0.0
+    prettier: ~3.9.7
