@@ -19,6 +19,6 @@ runs:
           shell: bash
           run: pnpm run lint-md
 
-        - name: Type-check
+        - name: Type check
           shell: bash
           run: pnpm run typecheck
