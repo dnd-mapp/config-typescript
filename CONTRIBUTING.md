@@ -32,7 +32,7 @@ CI runs these checks on every pull request. Run them locally before you push.
 | Script                  | Purpose                                              |
 |:------------------------|:-----------------------------------------------------|
 | `pnpm run format-check` | Checks formatting with Prettier                      |
-| `pnpm run typecheck`    | Type-checks the scripts and tooling files with `tsc` |
+| `pnpm run typecheck`    | Type-checks the tooling files with `tsc`             |
 | `pnpm run lint-md`      | Lints Markdown with markdownlint-cli2                |
 
 Run `pnpm run format` to fix formatting issues.
