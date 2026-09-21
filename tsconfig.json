@@ -1,7 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
     "extends": "./configs/base.json",
-    "files": [".prettierrc.ts"],
+    "files": [".prettierrc.ts", "commitlint.config.ts"],
     "compilerOptions": {
         "lib": ["ES2025"],
         "module": "nodenext",
