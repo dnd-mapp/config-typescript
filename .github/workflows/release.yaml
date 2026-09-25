@@ -53,11 +53,13 @@ jobs:
 
             - name: Stage the package
               shell: bash
-              run: pnpm stage publish --access public --provenance --tag latest --no-git-checks
+              run: pnpm stage publish --provenance --no-git-checks
 
     release:
         name: GitHub Release
-        needs: [verify, publish]
+        needs:
+            - verify
+            - publish
         runs-on: ubuntu-26.04
         timeout-minutes: 5
         permissions:
