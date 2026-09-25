@@ -22,15 +22,18 @@ Dependency versions live in the `catalog` in `pnpm-workspace.yaml`, which uses `
 
 Newly published releases are held back for three days through `minimumReleaseAge`. You may need to wait before you can bump to a very recent version.
 
+Install [actionlint](https://github.com/rhysd/actionlint) to lint the workflows locally, for example with `brew install actionlint`. CI runs the version that `.github/actions/ci/action.yaml` pins.
+
 ## Checks
 
 CI runs these checks on every pull request. Run them locally before you push.
 
-| Script                  | Purpose                                              |
-|:------------------------|:-----------------------------------------------------|
-| `pnpm run format-check` | Checks formatting with Prettier                      |
-| `pnpm run typecheck`    | Type-checks the tooling files with `tsc`             |
-| `pnpm run lint-md`      | Lints Markdown with markdownlint-cli2                |
+| Command                 | Purpose                                  |
+|:------------------------|:-----------------------------------------|
+| `pnpm run format-check` | Checks formatting with Prettier          |
+| `pnpm run typecheck`    | Type-checks the tooling files with `tsc` |
+| `pnpm run lint-md`      | Lints Markdown with markdownlint-cli2    |
+| `actionlint`            | Lints the workflows in `.github`         |
 
 Run `pnpm run format` to fix formatting issues.
 
