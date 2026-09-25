@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/@dnd-mapp/config-typescript)](https://www.npmjs.com/package/@dnd-mapp/config-typescript)
 [![license](https://img.shields.io/npm/l/@dnd-mapp/config-typescript)](LICENSE)
 
-Shared, reusable TypeScript configs (tsconfig bases) for all D&D Mapp projects.
+Shared, reusable TypeScript configs (tsconfig bases).
 
 ## Requirements
 
