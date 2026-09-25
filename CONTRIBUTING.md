@@ -41,12 +41,14 @@ Run `pnpm run format` to fix formatting issues.
 
 Configs live in `configs/*.json`. The `exports` map in `package.json` exposes each file with and without the `.json` extension.
 
-Keep every config independent of the environment. Do not set `target`, `module`, `moduleResolution`, `lib`, `types`, `jsx`, or any emit and path options. Consumers add these in their own `tsconfig.json`.
+Keep `base` independent of the environment. Do not set `target`, `module`, `moduleResolution`, `lib`, `types`, or `jsx` in it. An environment config, such as `node`, extends `base` and sets only these options.
+
+No config sets emit or path options. Consumers add these in their own `tsconfig.json`.
 
 When you add or change an option, update the README in the same pull request.
 
 - Update the "Available configs" table when you add a config.
-- Update the "What `base` configures" section when you change the options of `base`.
+- Update the "What `<config>` configures" section of every config whose options you change.
 
 ## Changelog and versioning
 
