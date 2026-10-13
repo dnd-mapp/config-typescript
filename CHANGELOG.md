@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-13
+
 ### Added
 
 - `nestjs` config for NestJS projects built with the Nest CLI and SWC, available as `@dnd-mapp/config-typescript/nestjs`. It extends `node` with the decorator options, `module: "esnext"` with `moduleResolution: "bundler"`, `verbatimModuleSyntax`, and `useDefineForClassFields: false`.
@@ -22,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - `base` config with strict, environment-independent compiler options, available as `@dnd-mapp/config-typescript/base`.
 
-[Unreleased]: https://github.com/dnd-mapp/config-typescript/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/dnd-mapp/config-typescript/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/dnd-mapp/config-typescript/releases/tag/v1.2.0
 [1.1.0]: https://github.com/dnd-mapp/config-typescript/releases/tag/v1.1.0
 [1.0.0]: https://github.com/dnd-mapp/config-typescript/releases/tag/v1.0.0
