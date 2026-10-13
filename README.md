@@ -41,10 +41,11 @@ For any other environment, extend `base` and add the options that depend on it, 
 
 ## Available configs
 
-| Config | Extends path                       | Description                                              |
-|:-------|:-----------------------------------|:---------------------------------------------------------|
-| `base` | `@dnd-mapp/config-typescript/base` | Strict, environment-independent defaults for any project |
-| `node` | `@dnd-mapp/config-typescript/node` | `base` plus the environment options for Node.js 24       |
+| Config   | Extends path                         | Description                                                    |
+|:---------|:-------------------------------------|:---------------------------------------------------------------|
+| `base`   | `@dnd-mapp/config-typescript/base`   | Strict, environment-independent defaults for any project       |
+| `node`   | `@dnd-mapp/config-typescript/node`   | `base` plus the environment options for Node.js 24             |
+| `nestjs` | `@dnd-mapp/config-typescript/nestjs` | `node` plus the options for NestJS built with Nest CLI and SWC |
 
 Each config is also available with the `.json` extension, for example `@dnd-mapp/config-typescript/base.json`.
 
@@ -71,6 +72,21 @@ The `node` config extends `base` and adds the options for code that runs on Node
 | `types`  | `["node"]`   | Loads only the Node.js types, so install `@types/node` in your project     |
 
 It does not set any emit or path options, so set `noEmit` or `outDir` in your own config.
+
+## What `nestjs` configures
+
+The `nestjs` config extends `node` and adds the options for a NestJS project that the Nest CLI builds with SWC. It keeps `target`, `lib`, and `types` from `node`.
+
+| Option                    | Value     | Effect                                                                                                        |
+|:--------------------------|:----------|:--------------------------------------------------------------------------------------------------------------|
+| `experimentalDecorators`  | `true`    | Compiles legacy decorators, which NestJS and the Nest CLI use                                                 |
+| `emitDecoratorMetadata`   | `true`    | Emits the constructor parameter types that NestJS reads to inject dependencies                                |
+| `module`                  | `esnext`  | Keeps ES module syntax and leaves the output format to SWC                                                    |
+| `moduleResolution`        | `bundler` | Allows extensionless relative imports, since the SWC builder adds the `.js` extension to imports and `paths`  |
+| `verbatimModuleSyntax`    | `true`    | Requires `import type` for type-only imports, so SWC can drop them while it transpiles one file at a time     |
+| `useDefineForClassFields` | `false`   | Initializes class fields the way the SWC defaults of the Nest CLI do, so `tsc` and SWC agree on the semantics |
+
+It does not set any emit or path options. Set `noEmit`, `paths`, `rootDir`, `include`, and `exclude` in your own config, since they depend on how your project is built and laid out.
 
 ## Changelog
 

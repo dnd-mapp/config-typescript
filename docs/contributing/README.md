@@ -18,6 +18,8 @@ Configs live in `configs/*.json`. The `exports` map in `package.json` exposes ea
 
 Keep `base` independent of the environment. Do not set `target`, `module`, `moduleResolution`, `lib`, `types`, or `jsx` in it. An environment config, such as `node`, extends `base` and sets only these options.
 
+A framework config, such as `nestjs`, extends an environment config. It sets only the options that its framework or build tool needs, and may override the environment options that the build tool handles differently.
+
 No config sets emit or path options. Consumers add these in their own `tsconfig.json`.
 
 When you add or change an option, update the README in the same pull request.
